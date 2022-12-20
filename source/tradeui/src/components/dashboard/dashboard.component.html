@@ -1,0 +1,73 @@
+<div id="dashboard">
+    <div class="card bg-light text-dark">
+        <div class="card-body">
+            <div class="card bg-secondary text-white">
+                <div class="card-body">
+                    <h2>About Figuration Engine</h2>
+                    <p>
+                        Figuration engine is responsible for calculating brokerage and net payable/receivable amount for
+                        online stock market trades. This engine utilizes nools rule engine to calculate the brokerage.
+                    </p>
+                </div>
+            </div>
+            <br>
+            <!-- <div class="table-responsive  col-sm-12 col-md-9">
+                <table class="table table-hover table-success table-striped table-bordered  text-nowrap">
+                    <thead class="thead-dark table-dark col-md-3">
+                        <tr> 
+                            <th>No. of Transactions</th>
+                            <th>Average processing time (ms)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="col-md-3">
+                        <tr> 
+                            <td>{{resultList.NoofTransactions}}</td>     
+                            <td>{{resultList.Avgprocessingtime}}</td>     
+                        </tr>                      
+                    </tbody>
+                </table>
+            </div> -->
+            <div class="row">
+                <div class="table-responsive col-md-5">
+                    <h2 class="sub-header">Status</h2>
+                    <table class="table table-hover table-success table-striped table-bordered  text-nowrap">
+                        <thead class="thead-dark table-dark">
+                            <tr>
+                                <th>Description</th>
+                                <th>Value</th>
+                            </tr>
+                        </thead>
+                        <tbody *ngFor="let status of parameterList">
+                            <tr>
+                                <td>{{status.parameter}}</td>
+                                <td>{{status.value}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-responsive col-md-7">
+                    <h2 class="sub-header">Balance</h2>
+                    <table class="table table-hover table-success table-striped table-bordered  text-nowrap">
+                        <thead class="thead-dark table-dark">
+                            <tr>
+                                <th>Client Name</th>
+                                <th>Amount (INR)</th>
+                                <th>Brokerage (INR)</th>
+                                <th>Balance (INR)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let bal of balanceList; let i = index">
+                                <td>{{bal.name}}</td>
+                                <td>{{bal.amount}}</td>
+                                <td>{{bal.brokerage}}</td>
+                                <td>{{bal.balance}}</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

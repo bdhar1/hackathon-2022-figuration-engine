@@ -1,0 +1,19 @@
+{
+  "name": "tradecli",
+  "version": "1.0.0",
+  "description": "A CLI to push trades from CSV file to service bus",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Biswajit Dhar",
+  "license": "ISC",
+  "dependencies": {
+    "@azure/service-bus": "^7.7.3",
+    "chalk": "^5.2.0",
+    "csv-parse": "^5.3.3",
+    "figlet": "^1.5.2",
+    "nanospinner": "^1.1.0"
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "connstring": "Endpoint=sb://sb-brokerage-calculator5.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=5L7j+NxAxbjSABSOZoyRfDi7vhR3GZsNvg9oyLEOll0=",
+  "topic": "tradebrokeragetopic"
+}

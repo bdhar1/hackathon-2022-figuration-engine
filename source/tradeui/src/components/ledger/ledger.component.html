@@ -1,0 +1,108 @@
+<!-- <div id="ledger">
+    <div class="card bg-light text-dark">
+        <div class="card-body">
+            <div class="col-sm-3 col-md-12">
+                <div>
+                    <br>
+                    <h5>Please select Client Name to view the ledger details</h5>
+                    <br>
+                    <div class="col-md-4">
+                        <label for="sel1">Client Name</label>
+                        <select name="user" class="form-control form-select" id="userdropdown"
+                            (change)="onChange($event)">
+                            <option *ngFor="let user of users" [value]="user">{{user}}</option>
+                        </select>
+                    </div>
+                    <br>
+                </div>
+                <div class="table-responsive" *ngIf="isDataExist">
+                    <table class="table table-hover table-success table-striped table-bordered  text-nowrap">
+                        <thead class="thead-dark table-dark">
+                            <tr>
+                                <th>Date</th>
+                                <th>Time </th>
+                                <th>Scrip</th>
+                                <th>Buy/Sell</th>
+                                <th>Price (INR)</th>
+                                <th>Quantity</th>
+                                <th colspan="12">Payable/Receivable Amount (INR) </th>
+                                <th>Transaction Amount (INR) </th>
+                                <th>Brokerage (INR) </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let data of ledgerList; let i = index">
+                                <td>{{data.date}}</td>
+                                <td>{{data.time}} </td>
+                                <td>{{data.scrip}}</td>
+                                <td>{{data.operation}}</td>
+                                <td>{{data.price}}</td>
+                                <td>{{data.quantity}}</td>
+                                <td colspan="12">{{data.amount}}</td>
+                                <td>{{data.price * data.quantity}}</td>
+                                <td>{{data.brokerage}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<div id="ledger">
+    <div class="card bg-light text-dark">
+        <div class="card-body">
+            <h5>Please select Client Name to view the Ledger details</h5>
+            <br>
+            <div class="row">
+                <div class="table-responsive col-md-4">
+                    <label for="sel1">Client Name</label>
+                    <select name="user" class="form-control form-select" id="userdropdown" (change)="onChange($event)">
+                        <option *ngFor="let user of users" [value]="user">{{user}}</option>
+                    </select>
+                </div>
+                <div class="table-responsive col-md-6">
+                    <br>
+                    <button type="button" (click)="refreshData()" [disabled]="!isDataExist ? true : null" class="btn btn-primary">
+                        <span class=reload>&#x21bb;</span> Refresh
+                    </button>                    
+                </div>
+                <div class="table-responsive col-md-2">
+                    <br>
+                    <label *ngIf="isDataExist">Displaying {{ledgerList.length}} records</label>
+                </div>
+            </div>
+            <p></p>
+            <div class="table-responsive row" style="margin-left: 0px;" *ngIf="isDataExist">
+                    <table class="table table-hover table-success table-striped table-bordered  text-nowrap">
+                        <thead class="thead-dark table-dark">
+                            <tr>
+                                <th>Date</th>
+                                <th>Time </th>
+                                <th>Scrip</th>
+                                <th>Buy/Sell</th>
+                                <th>Price (INR)</th>
+                                <th>Quantity</th>
+                                <th colspan="12">Payable/Receivable Amount (INR) </th>
+                                <th>Transaction Amount (INR) </th>
+                                <th>Brokerage (INR) </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let data of ledgerList; let i = index">
+                                <td>{{data.date}}</td>
+                                <td>{{data.time}} </td>
+                                <td>{{data.scrip}}</td>
+                                <td>{{data.operation}}</td>
+                                <td>{{data.price}}</td>
+                                <td>{{data.quantity}}</td>
+                                <td colspan="12">{{data.amount}}</td>
+                                <td>{{data.TransactionAmt}}</td>
+                                <td>{{data.brokerage}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>

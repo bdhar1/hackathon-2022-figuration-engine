@@ -1,0 +1,23 @@
+{
+  "name": "processor",
+  "version": "1.0.0",
+  "description": "The main processor for incoming trades",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "Biswajit Dhar",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "@azure/service-bus": "^7.7.3",
+    "currency.js": "^2.0.4",
+    "json-rules-engine": "^6.1.2",
+    "pg": "^8.8.0",
+    "uuid": "^9.0.0"
+  }
+}

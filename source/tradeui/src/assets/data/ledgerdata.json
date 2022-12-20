@@ -1,0 +1,55 @@
+{
+  "ledger" : [
+  {
+    "ClientName": "Priyanka",
+     "Date": "12/12/2022",
+    "Time": "12:30 PM",
+    "Script": "NA",
+    "BuySell": "Buy",
+    "Price": 45,
+    "Quantity": 45,
+    "PayableReceivableAmt": 22,
+    "TransactionAmt": 23,
+    "Brokerage": 45
+    
+  },
+  {
+    "ClientName": "Devanshu",
+    "Date": "12/12/2022",
+   "Time": "12:30 PM",
+   "Script": "NA",
+   "BuySell": "Buy",
+   "Price": 42,
+   "Quantity": 63,
+   "PayableReceivableAmt": 35,
+   "TransactionAmt": 75,
+   "Brokerage": 278
+  }    
+],
+"balance" : [
+  {
+    "name": "Priyanka",
+    "amount"     :456,
+    "brokerage": 45,
+    "balance" :67000
+    
+  },
+  {
+    "name": "Devanshu",
+    "amount"     :389,
+    "brokerage": 12,
+    "balance" :900000
+  }    
+],
+"status" : [
+  {
+    "NoofTransactions": 100,
+    "Avgprocessingtime" : 4
+    
+  },
+  {
+    "NoofTransactions": 45,
+    "Avgprocessingtime" : 1
+  }    
+]
+}
