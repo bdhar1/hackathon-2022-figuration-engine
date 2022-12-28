@@ -9,14 +9,15 @@ export async function Evaluate(prevTranAmount, tranAmount) {
     
   engine.addFact('tran-amount', prevTranAmount);
   await engine.run().then(({ events }) => {
-    brok1 = events[0].params.fixedValue + ((prevTranAmount - events[0].params.subtractAmount) * events[0].params.percentValue + 0.01);
+    brok1 = events[0].params.fixedValue + ((prevTranAmount - events[0].params.subtractAmount) * events[0].params.percentValue * 0.01);
+
     //console.log(brok1);
   })
   
   engine.removeFact('tran-amount');
   engine.addFact('tran-amount', (prevTranAmount + tranAmount));
   await engine.run().then(({ events }) => {
-    brok2 = events[0].params.fixedValue + ((prevTranAmount + tranAmount - events[0].params.subtractAmount) * events[0].params.percentValue + 0.01);
+    brok2 = events[0].params.fixedValue + ((prevTranAmount + tranAmount - events[0].params.subtractAmount) * events[0].params.percentValue * 0.01);
     //console.log(brok2);
   })
 
